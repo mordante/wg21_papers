@@ -11,11 +11,12 @@
       span.smallcaps{font-variant: small-caps;}
       span.underline{text-decoration: underline;}
       div.column{display: inline-block; vertical-align: top; width: 50%;}
-      div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
+      div.csl-block{margin-left: 1.5em;}
       ul.task-list{list-style: none;}
       pre > code.sourceCode { white-space: pre; position: relative; }
       pre > code.sourceCode > span { display: inline-block; line-height: 1.25; }
       pre > code.sourceCode > span:empty { height: 1.2em; }
+      .sourceCode { overflow: visible; }
       code.sourceCode > span { color: inherit; text-decoration: inherit; }
       div.sourceCode { margin: 1em 0; }
       pre.sourceCode { margin: 0; }
@@ -46,7 +47,7 @@
       @media screen {
       pre > code.sourceCode > span > a:first-child::before { text-decoration: underline; }
       }
-      code span. { } /* Normal */
+      code span { } /* Normal */
       code span.al { color: #ff0000; } /* Alert */
       code span.an { } /* Annotation */
       code span.at { } /* Attribute */
@@ -410,16 +411,15 @@ ol.enumerate { list-style-type: none; background: inherit; }
 code.sourceCode > span { display: inline; }
 </style>
   <link href="data:image/x-icon;base64,AAABAAIAEBAAAAEAIABoBAAAJgAAACAgAAABACAAqBAAAI4EAAAoAAAAEAAAACAAAAABACAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA////AIJEAACCRAAAgkQAAIJEAACCRAAAgkQAVoJEAN6CRADegkQAWIJEAACCRAAAgkQAAIJEAACCRAAA////AP///wCCRAAAgkQAAIJEAACCRAAsgkQAvoJEAP+CRAD/gkQA/4JEAP+CRADAgkQALoJEAACCRAAAgkQAAP///wD///8AgkQAAIJEABSCRACSgkQA/IJEAP99PQD/dzMA/3czAP99PQD/gkQA/4JEAPyCRACUgkQAFIJEAAD///8A////AHw+AFiBQwDqgkQA/4BBAP9/PxP/uZd6/9rJtf/bybX/upd7/39AFP+AQQD/gkQA/4FDAOqAQgBc////AP///wDKklv4jlEa/3o7AP+PWC//8+3o///////////////////////z7un/kFox/35AAP+GRwD/mVYA+v///wD///8A0Zpk+NmibP+0d0T/8evj///////+/fv/1sKz/9bCs//9/fr//////+/m2/+NRwL/nloA/5xYAPj///8A////ANKaZPjRmGH/5cKh////////////k149/3UwAP91MQD/lmQ//86rhv+USg3/m1YA/5hSAP+bVgD4////AP///wDSmmT4zpJY/+/bx///////8+TV/8mLT/+TVx//gkIA/5lVAP+VTAD/x6B//7aEVv/JpH7/s39J+P///wD///8A0ppk+M6SWP/u2sf///////Pj1f/Nj1T/2KFs/8mOUv+eWhD/lEsA/8aee/+0glT/x6F7/7J8Rvj///8A////ANKaZPjRmGH/48Cf///////+/v7/2qt//82PVP/OkFX/37KJ/86siv+USg7/mVQA/5hRAP+bVgD4////AP///wDSmmT40ppk/9CVXP/69O////////7+/v/x4M//8d/P//7+/f//////9u7n/6tnJf+XUgD/nFgA+P///wD///8A0ppk+NKaZP/RmWL/1qNy//r07///////////////////////+vXw/9akdP/Wnmn/y5FY/6JfFvj///8A////ANKaZFTSmmTo0ppk/9GYYv/Ql1//5cWm//Hg0P/x4ND/5cWm/9GXYP/RmGH/0ppk/9KaZOjVnmpY////AP///wDSmmQA0ppkEtKaZI7SmmT60ppk/9CWX//OkVb/zpFW/9CWX//SmmT/0ppk/NKaZJDSmmQS0ppkAP///wD///8A0ppkANKaZADSmmQA0ppkKtKaZLrSmmT/0ppk/9KaZP/SmmT/0ppkvNKaZCrSmmQA0ppkANKaZAD///8A////ANKaZADSmmQA0ppkANKaZADSmmQA0ppkUtKaZNzSmmTc0ppkVNKaZADSmmQA0ppkANKaZADSmmQA////AP5/AAD4HwAA4AcAAMADAACAAQAAgAEAAIABAACAAQAAgAEAAIABAACAAQAAgAEAAMADAADgBwAA+B8AAP5/AAAoAAAAIAAAAEAAAAABACAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA////AP///wCCRAAAgkQAAIJEAACCRAAAgkQAAIJEAACCRAAAgkQAAIJEAACCRAAAgkQAAIJEAAyCRACMgkQA6oJEAOqCRACQgkQAEIJEAACCRAAAgkQAAIJEAACCRAAAgkQAAIJEAACCRAAAgkQAAIJEAACCRAAA////AP///wD///8A////AIJEAACCRAAAgkQAAIJEAACCRAAAgkQAAIJEAACCRAAAgkQAAIJEAACCRABigkQA5oJEAP+CRAD/gkQA/4JEAP+CRADqgkQAZoJEAACCRAAAgkQAAIJEAACCRAAAgkQAAIJEAACCRAAAgkQAAIJEAAD///8A////AP///wD///8AgkQAAIJEAACCRAAAgkQAAIJEAACCRAAAgkQAAIJEAACCRAA4gkQAwoJEAP+CRAD/gkQA/4JEAP+CRAD/gkQA/4JEAP+CRAD/gkQAxIJEADyCRAAAgkQAAIJEAACCRAAAgkQAAIJEAACCRAAAgkQAAP///wD///8A////AP///wCCRAAAgkQAAIJEAACCRAAAgkQAAIJEAACCRAAWgkQAmIJEAP+CRAD/gkQA/4JEAP+CRAD/gkQA/4JEAP+CRAD/gkQA/4JEAP+CRAD/gkQA/4JEAJyCRAAYgkQAAIJEAACCRAAAgkQAAIJEAACCRAAA////AP///wD///8A////AIJEAACCRAAAgkQAAIJEAACCRAAAgkQAdIJEAPCCRAD/gkQA/4JEAP+CRAD/gkQA/4JEAP+CRAD/gkQA/4JEAP+CRAD/gkQA/4JEAP+CRAD/gkQA/4JEAPSCRAB4gkQAAIJEAACCRAAAgkQAAIJEAAD///8A////AP///wD///8AgkQAAIJEAACCRAAAgkQASoJEANKCRAD/gkQA/4JEAP+CRAD/g0YA/39AAP9zLgD/bSQA/2shAP9rIQD/bSQA/3MuAP9/PwD/g0YA/4JEAP+CRAD/gkQA/4JEAP+CRADUgkQAToJEAACCRAAAgkQAAP///wD///8A////AP///wB+PwAAgkUAIoJEAKiCRAD/gkQA/4JEAP+CRAD/hEcA/4BBAP9sIwD/dTAA/5RfKv+viF7/vp56/76ee/+wiF7/lWAr/3YxAP9sIwD/f0AA/4RHAP+CRAD/gkQA/4JEAP+CRAD/gkQArIJEACaBQwAA////AP///wD///8A////AIBCAEBzNAD6f0EA/4NFAP+CRAD/gkQA/4VIAP92MwD/bSUA/6N1Tv/ezsL/////////////////////////////////38/D/6V3Uv9uJgD/dTEA/4VJAP+CRAD/gkQA/4JEAP+BQwD/fUAA/4FDAEj///8A////AP///wD///8AzJRd5qBlKf91NgD/dDUA/4JEAP+FSQD/cy4A/3YyAP/PuKP//////////////////////////////////////////////////////9K7qP94NQD/ciwA/4VJAP+CRAD/fkEA/35BAP+LSwD/mlYA6v///wD///8A////AP///wDdpnL/4qx3/8KJUv+PUhf/cTMA/3AsAP90LgD/4dK+/////////////////////////////////////////////////////////////////+TYxf91MAD/dTIA/31CAP+GRwD/llQA/6FcAP+gWwD8////AP///wD///8A////ANGZY/LSm2X/4ap3/92mcP+wdT3/byQA/8mwj////////////////////////////////////////////////////////////////////////////+LYxv9zLgP/jUoA/59bAP+hXAD/nFgA/5xYAPL///8A////AP///wD///8A0ppk8tKaZP/RmWL/1p9q/9ubXv/XqXj////////////////////////////7+fD/vZyG/6BxS/+gcUr/vJuE//r37f//////////////////////3MOr/5dQBf+dVQD/nVkA/5xYAP+cWAD/nFgA8v///wD///8A////AP///wDSmmTy0ppk/9KaZP/SmWP/yohJ//jo2P//////////////////////4NTG/4JDFf9lGAD/bSQA/20kAP9kGAD/fz8S/+Xb0f//////5NG9/6txN/+LOgD/m1QA/51aAP+cWAD/m1cA/5xYAP+cWADy////AP///wD///8A////ANKaZPLSmmT/0ppk/8+TWf/Unmv//v37//////////////////////+TWRr/VwsA/35AAP+ERgD/g0UA/4JGAP9lHgD/kFga/8KXX/+TRwD/jT4A/49CAP+VTQD/n10A/5xYAP+OQQD/lk4A/55cAPL///8A////AP///wD///8A0ppk8tKaZP/SmmT/y4tO/92yiP//////////////////////8NnE/8eCQP+rcTT/ez0A/3IyAP98PgD/gEMA/5FSAP+USwD/jj8A/5lUAP+JNwD/yqV2/694Mf+HNQD/jkAA/82rf/+laBj/jT4A8v///wD///8A////AP///wDSmmTy0ppk/9KaZP/LiUr/4byY///////////////////////gupX/0I5P/+Wuev/Lklz/l1sj/308AP+QSwD/ol0A/59aAP+aVQD/k0oA/8yoh///////+fXv/6pwO//Lp3v///////Pr4f+oay7y////AP///wD///8A////ANKaZPLSmmT/0ppk/8uJSv/hvJj//////////////////////+G7l//Jhkb/0ppk/96nc//fqXX/x4xO/6dkFP+QSQD/llEA/5xXAP+USgD/yaOA///////38uv/qG05/8ijdv//////8efb/6ZpLPL///8A////AP///wD///8A0ppk8tKaZP/SmmT/zIxO/9yxh///////////////////////7dbA/8iEQf/Sm2X/0Zlj/9ScZv/eqHf/2KJv/7yAQf+XTgD/iToA/5lSAP+JNgD/yKFv/611LP+HNQD/jT8A/8qmeP+kZRT/jT4A8v///wD///8A////AP///wDSmmTy0ppk/9KaZP/Pk1n/1J5q//78+//////////////////+/fv/1aFv/8iEQv/Tm2b/0ppl/9GZY//Wn2z/1pZc/9eldf/Bl2b/kUcA/4w9AP+OQAD/lUwA/59eAP+cWQD/jT8A/5ZOAP+eXADy////AP///wD///8A////ANKaZPLSmmT/0ppk/9KZY//KiEn/8d/P///////////////////////47+f/05tm/8iCP//KiEj/yohJ/8eCP//RmGH//vfy///////n1sP/rXQ7/4k4AP+TTAD/nVoA/5xYAP+cVwD/nFgA/5xYAPL///8A////AP///wD///8A0ppk8tKaZP/SmmT/0ptl/8uLTf/aq37////////////////////////////+/fz/6c2y/961jv/etY7/6Myx//78+v//////////////////////3MWv/5xXD/+ORAD/mFQA/51ZAP+cWAD/nFgA8v///wD///8A////AP///wDSmmTy0ppk/9KaZP/SmmT/0ppk/8mFRP/s1b//////////////////////////////////////////////////////////////////////////////+PD/0JFU/7NzMv+WUQD/kUsA/5tXAP+dWQDy////AP///wD///8A////ANKaZP/SmmT/0ppk/9KaZP/Sm2X/z5NZ/8yMT//z5NX/////////////////////////////////////////////////////////////////9Ofa/8yNUP/UmGH/36p5/8yTWv+qaSD/kksA/5ROAPz///8A////AP///wD///8A0ppk5NKaZP/SmmT/0ppk/9KaZP/TnGf/zY9T/82OUv/t1sD//////////////////////////////////////////////////////+7Yw//OkFX/zI5R/9OcZ//SmmP/26V0/9ymdf/BhUf/ol8R6P///wD///8A////AP///wDSmmQ80ppk9tKaZP/SmmT/0ppk/9KaZP/TnGj/zpFW/8qJSv/dson/8uHS//////////////////////////////////Lj0//etIv/y4lL/86QVf/TnGj/0ppk/9KaZP/RmWP/05xn/9ymdfjUnWdC////AP///wD///8A////ANKaZADSmmQc0ppkotKaZP/SmmT/0ppk/9KaZP/Tm2b/0Zli/8qJSf/NjlH/16Z3/+G8mP/myKr/5siq/+G8mP/Xp3f/zY5S/8qISf/RmGH/05tm/9KaZP/SmmT/0ppk/9KaZP/SmmSm0pljINWdaQD///8A////AP///wD///8A0ppkANKaZADSmmQA0ppkQtKaZMrSmmT/0ppk/9KaZP/SmmT/0ptl/9GYYf/Nj1P/y4lL/8qISP/KiEj/y4lK/82PU//RmGH/0ptl/9KaZP/SmmT/0ppk/9KaZP/SmmTO0ppkRtKaZADSmmQA0ppkAP///wD///8A////AP///wDSmmQA0ppkANKaZADSmmQA0ppkANKaZGzSmmTu0ppk/9KaZP/SmmT/0ppk/9KaZP/SmmT/0ppk/9KaZP/SmmT/0ppk/9KaZP/SmmT/0ppk/9KaZP/SmmTw0ppkcNKaZADSmmQA0ppkANKaZADSmmQA////AP///wD///8A////ANKaZADSmmQA0ppkANKaZADSmmQA0ppkANKaZBLSmmSQ0ppk/9KaZP/SmmT/0ppk/9KaZP/SmmT/0ppk/9KaZP/SmmT/0ppk/9KaZP/SmmT/0ppklNKaZBTSmmQA0ppkANKaZADSmmQA0ppkANKaZAD///8A////AP///wD///8A0ppkANKaZADSmmQA0ppkANKaZADSmmQA0ppkANKaZADSmmQy0ppkutKaZP/SmmT/0ppk/9KaZP/SmmT/0ppk/9KaZP/SmmT/0ppkvtKaZDbSmmQA0ppkANKaZADSmmQA0ppkANKaZADSmmQA0ppkAP///wD///8A////AP///wDSmmQA0ppkANKaZADSmmQA0ppkANKaZADSmmQA0ppkANKaZADSmmQA0ppkXNKaZODSmmT/0ppk/9KaZP/SmmT/0ppk5NKaZGDSmmQA0ppkANKaZADSmmQA0ppkANKaZADSmmQA0ppkANKaZADSmmQA////AP///wD///8A////ANKaZADSmmQA0ppkANKaZADSmmQA0ppkANKaZADSmmQA0ppkANKaZADSmmQA0ppkBtKaZIbSmmTo0ppk6tKaZIrSmmQK0ppkANKaZADSmmQA0ppkANKaZADSmmQA0ppkANKaZADSmmQA0ppkANKaZAD///8A////AP/8P///+B///+AH//+AAf//AAD//AAAP/AAAA/gAAAHwAAAA8AAAAPAAAADwAAAA8AAAAPAAAADwAAAA8AAAAPAAAADwAAAA8AAAAPAAAADwAAAA8AAAAPAAAADwAAAA+AAAAfwAAAP/AAAP/8AAP//gAH//+AH///4H////D//" rel="icon" />
+  
   <!--[if lt IE 9]>
     <script src="//cdnjs.cloudflare.com/ajax/libs/html5shiv/3.7.3/html5shiv-printshiv.min.js"></script>
   <![endif]-->
-  
 </head>
 <body>
 <div class="wrapper">
 <header id="title-block-header">
 <h1 class="title" style="text-align:center">Chrono formatter issues</h1>
-
 <table style="border:none;float:right">
   <tr>
     <td>Document #:</td>
@@ -446,80 +446,108 @@ code.sourceCode > span { display: inline; }
     </td>
   </tr>
 </table>
-
 </header>
 <div style="clear:both">
 <div id="TOC" role="doc-toc">
 <h1 id="toctitle">Contents</h1>
 <ul>
-<li><a href="#introduction"><span class="toc-section-number">1</span> Introduction<span></span></a></li>
-<li><a href="#formatting-time_points-and-durations-with-a-floating-point-representation-type"><span class="toc-section-number">2</span> Formatting <code class="sourceCode default">time_point</code>s and <code class="sourceCode default">duration</code>s with a floating-point representation type<span></span></a>
+<li><a href="#introduction" id="toc-introduction"><span class="toc-section-number">1</span> Introduction<span></span></a></li>
+<li><a href="#formatting-time_points-and-durations-with-a-floating-point-representation-type" id="toc-formatting-time_points-and-durations-with-a-floating-point-representation-type"><span class="toc-section-number">2</span> Formatting
+<code class="sourceCode default">time_point</code>s and
+<code class="sourceCode default">duration</code>s with a floating-point
+representation type<span></span></a>
 <ul>
-<li><a href="#formatting-seconds"><span class="toc-section-number">2.1</span> Formatting seconds<span></span></a>
+<li><a href="#formatting-seconds" id="toc-formatting-seconds"><span class="toc-section-number">2.1</span> Formatting
+seconds<span></span></a>
 <ul>
-<li><a href="#discussion"><span class="toc-section-number">2.1.1</span> Discussion<span></span></a></li>
+<li><a href="#discussion" id="toc-discussion"><span class="toc-section-number">2.1.1</span> Discussion<span></span></a></li>
 </ul></li>
 </ul></li>
-<li><a href="#duration"><span class="toc-section-number">3</span> Duration<span></span></a>
+<li><a href="#duration" id="toc-duration"><span class="toc-section-number">3</span> Duration<span></span></a>
 <ul>
-<li><a href="#discussion-1"><span class="toc-section-number">3.1</span> Discussion<span></span></a></li>
+<li><a href="#discussion-1" id="toc-discussion-1"><span class="toc-section-number">3.1</span> Discussion<span></span></a></li>
 </ul></li>
-<li><a href="#outputting-of-invalid-days"><span class="toc-section-number">4</span> Outputting of invalid days<span></span></a>
+<li><a href="#outputting-of-invalid-days" id="toc-outputting-of-invalid-days"><span class="toc-section-number">4</span> Outputting of invalid
+days<span></span></a>
 <ul>
-<li><a href="#discussion-2"><span class="toc-section-number">4.1</span> Discussion<span></span></a></li>
-<li><a href="#proposed-resolution"><span class="toc-section-number">4.2</span> Proposed resolution<span></span></a></li>
+<li><a href="#discussion-2" id="toc-discussion-2"><span class="toc-section-number">4.1</span> Discussion<span></span></a></li>
+<li><a href="#proposed-resolution" id="toc-proposed-resolution"><span class="toc-section-number">4.2</span> Proposed
+resolution<span></span></a></li>
 </ul></li>
-<li><a href="#formatting-month"><span class="toc-section-number">5</span> Formatting month<span></span></a>
+<li><a href="#formatting-month" id="toc-formatting-month"><span class="toc-section-number">5</span> Formatting month<span></span></a>
 <ul>
-<li><a href="#discussion-3"><span class="toc-section-number">5.1</span> Discussion<span></span></a></li>
-<li><a href="#proposed-resolution-1"><span class="toc-section-number">5.2</span> Proposed resolution<span></span></a></li>
+<li><a href="#discussion-3" id="toc-discussion-3"><span class="toc-section-number">5.1</span> Discussion<span></span></a></li>
+<li><a href="#proposed-resolution-1" id="toc-proposed-resolution-1"><span class="toc-section-number">5.2</span> Proposed
+resolution<span></span></a></li>
 </ul></li>
-<li><a href="#formatting-year"><span class="toc-section-number">6</span> Formatting year<span></span></a>
+<li><a href="#formatting-year" id="toc-formatting-year"><span class="toc-section-number">6</span> Formatting year<span></span></a>
 <ul>
-<li><a href="#discussion-4"><span class="toc-section-number">6.1</span> Discussion<span></span></a></li>
-<li><a href="#proposed-resolution-2"><span class="toc-section-number">6.2</span> Proposed resolution<span></span></a></li>
+<li><a href="#discussion-4" id="toc-discussion-4"><span class="toc-section-number">6.1</span> Discussion<span></span></a></li>
+<li><a href="#proposed-resolution-2" id="toc-proposed-resolution-2"><span class="toc-section-number">6.2</span> Proposed
+resolution<span></span></a></li>
 </ul></li>
-<li><a href="#streaming-month-day"><span class="toc-section-number">7</span> Streaming month day<span></span></a>
+<li><a href="#streaming-month-day" id="toc-streaming-month-day"><span class="toc-section-number">7</span> Streaming month day<span></span></a>
 <ul>
-<li><a href="#discussion-5"><span class="toc-section-number">7.1</span> Discussion<span></span></a></li>
-<li><a href="#proposed-resolution-3"><span class="toc-section-number">7.2</span> Proposed resolution<span></span></a></li>
+<li><a href="#discussion-5" id="toc-discussion-5"><span class="toc-section-number">7.1</span> Discussion<span></span></a></li>
+<li><a href="#proposed-resolution-3" id="toc-proposed-resolution-3"><span class="toc-section-number">7.2</span> Proposed
+resolution<span></span></a></li>
 </ul></li>
-<li><a href="#streaming-year-month-weekday"><span class="toc-section-number">8</span> Streaming year month weekday<span></span></a>
+<li><a href="#streaming-year-month-weekday" id="toc-streaming-year-month-weekday"><span class="toc-section-number">8</span> Streaming year month
+weekday<span></span></a>
 <ul>
-<li><a href="#discussion-6"><span class="toc-section-number">8.1</span> Discussion<span></span></a></li>
+<li><a href="#discussion-6" id="toc-discussion-6"><span class="toc-section-number">8.1</span> Discussion<span></span></a></li>
 </ul></li>
-<li><a href="#bibliography"><span class="toc-section-number">9</span> References<span></span></a></li>
+<li><a href="#bibliography" id="toc-bibliography"><span class="toc-section-number">9</span> References<span></span></a></li>
 </ul>
 </div>
 <h1 data-number="1" id="introduction"><span class="header-section-number">1</span> Introduction<a href="#introduction" class="self-link"></a></h1>
-<p><span class="citation" data-cites="P1361R2">[<a href="#ref-P1361R2" role="doc-biblioref">P1361R2</a>]</span> introduced formatting for <code class="sourceCode default">&lt;chrono&gt;</code>, <span class="citation" data-cites="P2372R3">[<a href="#ref-P2372R3" role="doc-biblioref">P2372R3</a>]</span> improved the handling of locales, and <span class="citation" data-cites="P1466R3">[<a href="#ref-P1466R3" role="doc-biblioref">P1466R3</a>]</span> added several fixes. (There are more papers than just this list.)</p>
-<p>While implementing these papers in libc++ I noticed several small issues. Instead of filing multiple LWG this paper lists and proposes resulutions these issues. Since all issues could be filed as LWG issues I propose to retro-actively apply these changes to C++20.</p>
-<p>The <code class="sourceCode default">&lt;chono&gt;</code> implementation in libc++ is not complete at the time of writing; several clocks are missing and all timezone parts are missing. Therefore there has been no investigation whether these parts are implementable as is.</p>
-<h1 data-number="2" id="formatting-time_points-and-durations-with-a-floating-point-representation-type"><span class="header-section-number">2</span> Formatting <code class="sourceCode default">time_point</code>s and <code class="sourceCode default">duration</code>s with a floating-point representation type<a href="#formatting-time_points-and-durations-with-a-floating-point-representation-type" class="self-link"></a></h1>
+<p><span class="citation" data-cites="P1361R2">[<a href="#ref-P1361R2" role="doc-biblioref">P1361R2</a>]</span> introduced formatting for
+<code class="sourceCode default">&lt;chrono&gt;</code>, <span class="citation" data-cites="P2372R3">[<a href="#ref-P2372R3" role="doc-biblioref">P2372R3</a>]</span> improved the handling of
+locales, and <span class="citation" data-cites="P1466R3">[<a href="#ref-P1466R3" role="doc-biblioref">P1466R3</a>]</span> added
+several fixes. (There are more papers than just this list.)</p>
+<p>While implementing these papers in libc++ I noticed several small
+issues. Instead of filing multiple LWG this paper lists and proposes
+resulutions these issues. Since all issues could be filed as LWG issues
+I propose to retro-actively apply these changes to C++20.</p>
+<p>The <code class="sourceCode default">&lt;chono&gt;</code>
+implementation in libc++ is not complete at the time of writing; several
+clocks are missing and all timezone parts are missing. Therefore there
+has been no investigation whether these parts are implementable as
+is.</p>
+<h1 data-number="2" id="formatting-time_points-and-durations-with-a-floating-point-representation-type"><span class="header-section-number">2</span> Formatting
+<code class="sourceCode default">time_point</code>s and
+<code class="sourceCode default">duration</code>s with a floating-point
+representation type<a href="#formatting-time_points-and-durations-with-a-floating-point-representation-type" class="self-link"></a></h1>
 <h2 data-number="2.1" id="formatting-seconds"><span class="header-section-number">2.1</span> Formatting seconds<a href="#formatting-seconds" class="self-link"></a></h2>
 <h3 data-number="2.1.1" id="discussion"><span class="header-section-number">2.1.1</span> Discussion<a href="#discussion" class="self-link"></a></h3>
 <p>Several of the enabled formatter specializations listed in <span>29.2
- <a href="https://wg21.link/time.syn">[time.syn]</a></span> are or use a <code class="sourceCode default">duration</code>. When the representation is a floating-point type the formatting of its fractional part is under specified.</p>
+<a href="https://wg21.link/time.syn">[time.syn]</a></span> are or use a
+<code class="sourceCode default">duration</code>. When the
+representation is a floating-point type the formatting of its fractional
+part is under specified.</p>
 <p><a href="https://wg21.link/tab:time.format.spec">[tab:time.format.spec]</a></p>
-<div class="sourceCode" id="cb1"><pre class="sourceCode default"><code class="sourceCode default"><span id="cb1-1"><a href="#cb1-1"></a>  %S … If the precision of the input cannot be exactly represented with</span>
-<span id="cb1-2"><a href="#cb1-2"></a>     seconds, then the format is a decimal floating-point number with a</span>
-<span id="cb1-3"><a href="#cb1-3"></a>     fixed format and a precision matching that of the precision of the</span>
-<span id="cb1-4"><a href="#cb1-4"></a>     input (or to a microseconds precision if the conversion to</span>
-<span id="cb1-5"><a href="#cb1-5"></a>     floating-point decimal seconds cannot be made within 18 fractional</span>
-<span id="cb1-6"><a href="#cb1-6"></a>     digits).</span></code></pre></div>
+<div class="sourceCode" id="cb1"><pre class="sourceCode default"><code class="sourceCode default"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a>  %S … If the precision of the input cannot be exactly represented with</span>
+<span id="cb1-2"><a href="#cb1-2" aria-hidden="true" tabindex="-1"></a>     seconds, then the format is a decimal floating-point number with a</span>
+<span id="cb1-3"><a href="#cb1-3" aria-hidden="true" tabindex="-1"></a>     fixed format and a precision matching that of the precision of the</span>
+<span id="cb1-4"><a href="#cb1-4" aria-hidden="true" tabindex="-1"></a>     input (or to a microseconds precision if the conversion to</span>
+<span id="cb1-5"><a href="#cb1-5" aria-hidden="true" tabindex="-1"></a>     floating-point decimal seconds cannot be made within 18 fractional</span>
+<span id="cb1-6"><a href="#cb1-6" aria-hidden="true" tabindex="-1"></a>     digits).</span></code></pre></div>
 <p>This wording is similar to <span>29.9.2
- <a href="https://wg21.link/time.hms.members">[time.hms.members]</a></span>/1</p>
-<div class="sourceCode" id="cb2"><pre class="sourceCode default"><code class="sourceCode default"><span id="cb2-1"><a href="#cb2-1"></a>  fractional_width is the number of fractional decimal digits represented by</span>
-<span id="cb2-2"><a href="#cb2-2"></a>  precision. fractional_width has the value of the smallest possible integer in</span>
-<span id="cb2-3"><a href="#cb2-3"></a>  the range [0, 18] such that precision will exactly represent all values of</span>
-<span id="cb2-4"><a href="#cb2-4"></a>  Duration. If no such value of fractional_width exists, then fractional_width</span>
-<span id="cb2-5"><a href="#cb2-5"></a>  is 6.</span></code></pre></div>
-<p>The latter makes it clear that floating-point values have 6 digits.</p>
-<p><span class="citation" data-cites="P2372R3">[<a href="#ref-P2372R3" role="doc-biblioref">P2372R3</a>]</span> “§2 The solution” has a tony table of how formatting a seconds with a <code class="sourceCode default">double</code> representation type</p>
+<a href="https://wg21.link/time.hms.members">[time.hms.members]</a></span>/1</p>
+<div class="sourceCode" id="cb2"><pre class="sourceCode default"><code class="sourceCode default"><span id="cb2-1"><a href="#cb2-1" aria-hidden="true" tabindex="-1"></a>  fractional_width is the number of fractional decimal digits represented by</span>
+<span id="cb2-2"><a href="#cb2-2" aria-hidden="true" tabindex="-1"></a>  precision. fractional_width has the value of the smallest possible integer in</span>
+<span id="cb2-3"><a href="#cb2-3" aria-hidden="true" tabindex="-1"></a>  the range [0, 18] such that precision will exactly represent all values of</span>
+<span id="cb2-4"><a href="#cb2-4" aria-hidden="true" tabindex="-1"></a>  Duration. If no such value of fractional_width exists, then fractional_width</span>
+<span id="cb2-5"><a href="#cb2-5" aria-hidden="true" tabindex="-1"></a>  is 6.</span></code></pre></div>
+<p>The latter makes it clear that floating-point values have 6
+digits.</p>
+<p><span class="citation" data-cites="P2372R3">[<a href="#ref-P2372R3" role="doc-biblioref">P2372R3</a>]</span> “§2 The solution” has a tony
+table of how formatting a seconds with a
+<code class="sourceCode default">double</code> representation type</p>
 <table>
 <colgroup>
-<col style="width: 50%"></col>
-<col style="width: 50%"></col>
+<col style="width: 50%" />
+<col style="width: 50%" />
 </colgroup>
 <thead>
 <tr class="header">
@@ -557,21 +585,24 @@ code.sourceCode > span { display: inline; }
 <p>This indicates that floating-point value should have 3 digits.</p>
 <h1 data-number="3" id="duration"><span class="header-section-number">3</span> Duration<a href="#duration" class="self-link"></a></h1>
 <h2 data-number="3.1" id="discussion-1"><span class="header-section-number">3.1</span> Discussion<a href="#discussion-1" class="self-link"></a></h2>
-<p>%q where units-suffix depends on the type Period​::​type as follows: not statically widen</p>
-<p>%Q should this honour precision? Should this honour locale specific deciamal separator and grouping?</p>
-<p>%S The duration can be stored as a floating-point value. It however is unclear how or when to output the decimals.</p>
+<p>%q where units-suffix depends on the type Period​::​type as follows:
+not statically widen</p>
+<p>%Q should this honour precision? Should this honour locale specific
+deciamal separator and grouping?</p>
+<p>%S The duration can be stored as a floating-point value. It however
+is unclear how or when to output the decimals.</p>
 <p>%S no grouping</p>
 <p>%OS does this show decimals</p>
 <h1 data-number="4" id="outputting-of-invalid-days"><span class="header-section-number">4</span> Outputting of invalid days<a href="#outputting-of-invalid-days" class="self-link"></a></h1>
 <h2 data-number="4.1" id="discussion-2"><span class="header-section-number">4.1</span> Discussion<a href="#discussion-2" class="self-link"></a></h2>
 <p><span>29.8.3.3
- <a href="https://wg21.link/time.cal.day.nonmembers">[time.cal.day.nonmembers]</a></span>/7</p>
-<div class="sourceCode" id="cb3"><pre class="sourceCode cpp"><code class="sourceCode cpp"><span id="cb3-1"><a href="#cb3-1"></a><span class="kw">template</span><span class="op">&lt;</span><span class="kw">class</span> charT, <span class="kw">class</span> traits<span class="op">&gt;</span></span>
-<span id="cb3-2"><a href="#cb3-2"></a>  basic_ostream<span class="op">&lt;</span>charT, traits<span class="op">&gt;&amp;</span></span>
-<span id="cb3-3"><a href="#cb3-3"></a>    <span class="kw">operator</span><span class="op">&lt;&lt;(</span>basic_ostream<span class="op">&lt;</span>charT, traits<span class="op">&gt;&amp;</span> os, <span class="kw">const</span> day<span class="op">&amp;</span> d<span class="op">)</span>;</span>
-<span id="cb3-4"><a href="#cb3-4"></a>Effects<span class="op">:</span> Equivalent to<span class="op">:</span> <span class="cf">return</span> os <span class="op">&lt;&lt;</span> <span class="op">(</span>d<span class="op">.</span>ok<span class="op">()</span> <span class="op">?</span></span>
-<span id="cb3-5"><a href="#cb3-5"></a>  format<span class="op">(</span>STATICALLY<span class="op">-</span>WIDEN<span class="op">&lt;</span>charT<span class="op">&gt;(</span><span class="st">&quot;{:</span><span class="sc">%d</span><span class="st">}&quot;</span><span class="op">)</span>, d<span class="op">)</span> <span class="op">:</span></span>
-<span id="cb3-6"><a href="#cb3-6"></a>  format<span class="op">(</span>STATICALLY<span class="op">-</span>WIDEN<span class="op">&lt;</span>charT<span class="op">&gt;(</span><span class="st">&quot;{:</span><span class="sc">%d</span><span class="st">} is not a valid day&quot;</span><span class="op">)</span>, d<span class="op">))</span>;</span></code></pre></div>
+<a href="https://wg21.link/time.cal.day.nonmembers">[time.cal.day.nonmembers]</a></span>/7</p>
+<div class="sourceCode" id="cb3"><pre class="sourceCode cpp"><code class="sourceCode cpp"><span id="cb3-1"><a href="#cb3-1" aria-hidden="true" tabindex="-1"></a><span class="kw">template</span><span class="op">&lt;</span><span class="kw">class</span> charT, <span class="kw">class</span> traits<span class="op">&gt;</span></span>
+<span id="cb3-2"><a href="#cb3-2" aria-hidden="true" tabindex="-1"></a>  basic_ostream<span class="op">&lt;</span>charT, traits<span class="op">&gt;&amp;</span></span>
+<span id="cb3-3"><a href="#cb3-3" aria-hidden="true" tabindex="-1"></a>    <span class="kw">operator</span><span class="op">&lt;&lt;(</span>basic_ostream<span class="op">&lt;</span>charT, traits<span class="op">&gt;&amp;</span> os, <span class="kw">const</span> day<span class="op">&amp;</span> d<span class="op">)</span>;</span>
+<span id="cb3-4"><a href="#cb3-4" aria-hidden="true" tabindex="-1"></a>Effects<span class="op">:</span> Equivalent to<span class="op">:</span> <span class="cf">return</span> os <span class="op">&lt;&lt;</span> <span class="op">(</span>d<span class="op">.</span>ok<span class="op">()</span> <span class="op">?</span></span>
+<span id="cb3-5"><a href="#cb3-5" aria-hidden="true" tabindex="-1"></a>  format<span class="op">(</span>STATICALLY<span class="op">-</span>WIDEN<span class="op">&lt;</span>charT<span class="op">&gt;(</span><span class="st">&quot;{:</span><span class="sc">%d</span><span class="st">}&quot;</span><span class="op">)</span>, d<span class="op">)</span> <span class="op">:</span></span>
+<span id="cb3-6"><a href="#cb3-6" aria-hidden="true" tabindex="-1"></a>  format<span class="op">(</span>STATICALLY<span class="op">-</span>WIDEN<span class="op">&lt;</span>charT<span class="op">&gt;(</span><span class="st">&quot;{:</span><span class="sc">%d</span><span class="st">} is not a valid day&quot;</span><span class="op">)</span>, d<span class="op">))</span>;</span></code></pre></div>
 <p>The output of the not valid days depends on the platform:</p>
 <table>
 <thead>
@@ -605,20 +636,45 @@ code.sourceCode > span { display: inline; }
 </tr>
 <tr class="even">
 <td>MinGW</td>
-<td style="text-align: right;">&quot; is not a valid day&quot;</td>
-<td style="text-align: right;">&quot; is not a valid day&quot;</td>
+<td style="text-align: right;">” is not a valid day”</td>
+<td style="text-align: right;">” is not a valid day”</td>
 </tr>
 </tbody>
 </table>
-<p>The issue stems from the library using <code class="sourceCode default">strftime</code> indirectly which is only defined in the range [1 , 31]. Another thing to take into account is</p>
+<p>The issue stems from the library using
+<code class="sourceCode default">strftime</code> indirectly which is
+only defined in the range [1 , 31]. Another thing to take into account
+is</p>
 <p><span>29.12
- <a href="https://wg21.link/time.format">[time.format]</a></span>/3</p>
-<div class="sourceCode" id="cb4"><pre class="sourceCode default"><code class="sourceCode default"><span id="cb4-1"><a href="#cb4-1"></a>  If the formatted object does not contain the information the conversion</span>
-<span id="cb4-2"><a href="#cb4-2"></a>  specifier refers to, an exception of type format_error is thrown.</span></code></pre></div>
-<p>Does an object <code class="sourceCode default">d</code> of the type <code class="sourceCode default">chrono::day</code> contains the conversion in format when <code class="sourceCode default">d.ok()</code> returns <code class="sourceCode default">false</code>. For some format specifiers this is explicitly spelled out in <a href="https://wg21.link/tab:time.format.spec">[tab:time.format.spec]</a>, for example <code class="sourceCode default">%B</code> (full month name) throws an exception when a <code class="sourceCode default">chrono::month</code> contains an invalid value, but <code class="sourceCode default">%m</code> (month as decimal number) doesn’t contain this wording.</p>
-<p>A possible solution would be for implementation to implement the handling of <code class="sourceCode default">%d</code> itself, this is quite easy; something along the line of <code class="sourceCode default">format(STATICALLY-WIDEN&lt;charT&gt;(&quot;{:02}&quot;), static_cast&lt;unsigned&gt;(d)))</code> would work.</p>
-<p>Unfortunately that has another issue <code class="sourceCode default">%Od</code> needs to format the locale’s alternative representation. How this is done depends on the locale of the system. Tests with the Japanese locale for libc++ shows only Linux uses an alternative representation for the Japanese locale. (I mainly tested with Japanese since that locale has both an alternative representation and an era (for example <code class="sourceCode default">%EC</code>).</p>
-<p>The locale information contains the first hundred numbers [0, 99] in the locale’s alternative representation. This gives the following results for <code class="sourceCode default">format(&quot;{:%Od}&quot;, d);</code></p>
+<a href="https://wg21.link/time.format">[time.format]</a></span>/3</p>
+<div class="sourceCode" id="cb4"><pre class="sourceCode default"><code class="sourceCode default"><span id="cb4-1"><a href="#cb4-1" aria-hidden="true" tabindex="-1"></a>  If the formatted object does not contain the information the conversion</span>
+<span id="cb4-2"><a href="#cb4-2" aria-hidden="true" tabindex="-1"></a>  specifier refers to, an exception of type format_error is thrown.</span></code></pre></div>
+<p>Does an object <code class="sourceCode default">d</code> of the type
+<code class="sourceCode default">chrono::day</code> contains the
+conversion in format when <code class="sourceCode default">d.ok()</code>
+returns <code class="sourceCode default">false</code>. For some format
+specifiers this is explicitly spelled out in <a href="https://wg21.link/tab:time.format.spec">[tab:time.format.spec]</a>,
+for example <code class="sourceCode default">%B</code> (full month name)
+throws an exception when a
+<code class="sourceCode default">chrono::month</code> contains an
+invalid value, but <code class="sourceCode default">%m</code> (month as
+decimal number) doesn’t contain this wording.</p>
+<p>A possible solution would be for implementation to implement the
+handling of <code class="sourceCode default">%d</code> itself, this is
+quite easy; something along the line of <code class="sourceCode default">format(STATICALLY-WIDEN&lt;charT&gt;(&quot;{:02}&quot;), static_cast&lt;unsigned&gt;(d)))</code>
+would work.</p>
+<p>Unfortunately that has another issue
+<code class="sourceCode default">%Od</code> needs to format the locale’s
+alternative representation. How this is done depends on the locale of
+the system. Tests with the Japanese locale for libc++ shows only Linux
+uses an alternative representation for the Japanese locale. (I mainly
+tested with Japanese since that locale has both an alternative
+representation and an era (for example
+<code class="sourceCode default">%EC</code>).</p>
+<p>The locale information contains the first hundred numbers [0, 99] in
+the locale’s alternative representation. This gives the following
+results for
+<code class="sourceCode default">format(&quot;{:%Od}&quot;, d);</code></p>
 <table>
 <thead>
 <tr class="header">
@@ -649,7 +705,9 @@ code.sourceCode > span { display: inline; }
 </tr>
 </tbody>
 </table>
-<p>For other types like month the for invalid values doesn’t rely on the chono formatter to work correctly using invalid values. Therefore it seems better to do this for all types.</p>
+<p>For other types like month the for invalid values doesn’t rely on the
+chono formatter to work correctly using invalid values. Therefore it
+seems better to do this for all types.</p>
 <ul>
 <li>day</li>
 <li>year</li>
@@ -658,37 +716,49 @@ code.sourceCode > span { display: inline; }
 <h2 data-number="4.2" id="proposed-resolution"><span class="header-section-number">4.2</span> Proposed resolution<a href="#proposed-resolution" class="self-link"></a></h2>
 <div class="bq">
 <div>
-<div class="sourceCode" id="cb5"><pre class="sourceCode diff"><code class="sourceCode diff"><span id="cb5-1"><a href="#cb5-1"></a><span class="st">- format(STATICALLY-WIDEN&lt;charT&gt;(&quot;{:<span class="diffdel">%d</span>} is not a valid day&quot;), <span class="diffdel">d</span>));</span></span>
-<span id="cb5-2"><a href="#cb5-2"></a><span class="va">+ format(STATICALLY-WIDEN&lt;charT&gt;(&quot;{:<span class="diffins">02</span>} is not a valid day&quot;), <span class="diffins">static_cast&lt;unsigned&gt;(d)</span>));</span></span></code></pre></div>
+<div class="sourceCode" id="cb5"><pre class="sourceCode diff"><code class="sourceCode diff"><span id="cb5-1"><a href="#cb5-1" aria-hidden="true" tabindex="-1"></a><span class="st">- format(STATICALLY-WIDEN&lt;charT&gt;(&quot;{:<span class="diffdel">%d</span>} is not a valid day&quot;), <span class="diffdel">d</span>));</span></span>
+<span id="cb5-2"><a href="#cb5-2" aria-hidden="true" tabindex="-1"></a><span class="va">+ format(STATICALLY-WIDEN&lt;charT&gt;(&quot;{:<span class="diffins">02</span>} is not a valid day&quot;), <span class="diffins">static_cast&lt;unsigned&gt;(d)</span>));</span></span></code></pre></div>
 </div>
 </div>
 <p>Note to</p>
 <p><span>29.12
- <a href="https://wg21.link/time.format">[time.format]</a></span>/3</p>
+<a href="https://wg21.link/time.format">[time.format]</a></span>/3</p>
 <p>make things outside the valid range unspecified</p>
 <h1 data-number="5" id="formatting-month"><span class="header-section-number">5</span> Formatting month<a href="#formatting-month" class="self-link"></a></h1>
 <h2 data-number="5.1" id="discussion-3"><span class="header-section-number">5.1</span> Discussion<a href="#discussion-3" class="self-link"></a></h2>
-<p>To output stream operator for an invalid month has an unused locale.</p>
+<p>To output stream operator for an invalid month has an unused
+locale.</p>
 <h2 data-number="5.2" id="proposed-resolution-1"><span class="header-section-number">5.2</span> Proposed resolution<a href="#proposed-resolution-1" class="self-link"></a></h2>
 <div class="bq">
 <div>
-<div class="sourceCode" id="cb6"><pre class="sourceCode diff"><code class="sourceCode diff"><span id="cb6-1"><a href="#cb6-1"></a><span class="st">- format(os.getloc(), STATICALLY-WIDEN&lt;charT&gt;(&quot;{} is not a valid month&quot;),</span></span>
-<span id="cb6-2"><a href="#cb6-2"></a><span class="va">+ format(STATICALLY-WIDEN&lt;charT&gt;(&quot;{} is not a valid month&quot;),</span></span></code></pre></div>
+<div class="sourceCode" id="cb6"><pre class="sourceCode diff"><code class="sourceCode diff"><span id="cb6-1"><a href="#cb6-1" aria-hidden="true" tabindex="-1"></a><span class="st">- format(os.getloc(), STATICALLY-WIDEN&lt;charT&gt;(&quot;{} is not a valid month&quot;),</span></span>
+<span id="cb6-2"><a href="#cb6-2" aria-hidden="true" tabindex="-1"></a><span class="va">+ format(STATICALLY-WIDEN&lt;charT&gt;(&quot;{} is not a valid month&quot;),</span></span></code></pre></div>
 </div>
 </div>
 <h1 data-number="6" id="formatting-year"><span class="header-section-number">6</span> Formatting year<a href="#formatting-year" class="self-link"></a></h1>
 <h2 data-number="6.1" id="discussion-4"><span class="header-section-number">6.1</span> Discussion<a href="#discussion-4" class="self-link"></a></h2>
 <p><a href="https://wg21.link/tab:time.format.spec">[tab:time.format.spec]</a></p>
-<p><code class="sourceCode default">%C</code> * C++ <code class="sourceCode default">The year divided by 100 using floored division. If the result is a single     decimal digit, it is prefixed with 0.</code> * C</p>
-<div class="sourceCode" id="cb7"><pre class="sourceCode default"><code class="sourceCode default"><span id="cb7-1"><a href="#cb7-1"></a>is replaced by the year divided by 100 and truncated to an integer, as a</span>
-<span id="cb7-2"><a href="#cb7-2"></a>decimal number (00–99).</span></code></pre></div>
-<p>The interesting observation is C doesn’t allow negative years to be a century. This seems like an omission in the C Standard. For non-negative values there is no difference between truncating and flooring.</p>
-<p>For a negative number, due to the sign, the result is never a single digit. So there is never padding. Changing this has an issue. [tab:time.parse.spec] <code class="sourceCode default">%C</code>’s specification</p>
-<div class="sourceCode" id="cb8"><pre class="sourceCode default"><code class="sourceCode default"><span id="cb8-1"><a href="#cb8-1"></a>The century as a decimal number. The modified command %NC specifies the maximum</span>
-<span id="cb8-2"><a href="#cb8-2"></a>number of characters to read. If N is not specified, the default is 2. Leading</span>
-<span id="cb8-3"><a href="#cb8-3"></a>zeroes are permitted but not required. The modified command %EC interprets the</span>
-<span id="cb8-4"><a href="#cb8-4"></a>locale&#39;s alternative representation of the century.</span></code></pre></div>
-<p>This by default accepts 2 characters, so <code class="sourceCode default">-09</code> would not be a valid century. This may cause incompatibility between binaries when used by different compiler versions. Since the benefit probably is small I propose no changes. Alternatively the wording at both places could be modified.</p>
+<p><code class="sourceCode default">%C</code> * C++ <code class="sourceCode default">The year divided by 100 using floored division. If the result is a single     decimal digit, it is prefixed with 0.</code>
+* C</p>
+<div class="sourceCode" id="cb7"><pre class="sourceCode default"><code class="sourceCode default"><span id="cb7-1"><a href="#cb7-1" aria-hidden="true" tabindex="-1"></a>is replaced by the year divided by 100 and truncated to an integer, as a</span>
+<span id="cb7-2"><a href="#cb7-2" aria-hidden="true" tabindex="-1"></a>decimal number (00–99).</span></code></pre></div>
+<p>The interesting observation is C doesn’t allow negative years to be a
+century. This seems like an omission in the C Standard. For non-negative
+values there is no difference between truncating and flooring.</p>
+<p>For a negative number, due to the sign, the result is never a single
+digit. So there is never padding. Changing this has an issue.
+[tab:time.parse.spec] <code class="sourceCode default">%C</code>’s
+specification</p>
+<div class="sourceCode" id="cb8"><pre class="sourceCode default"><code class="sourceCode default"><span id="cb8-1"><a href="#cb8-1" aria-hidden="true" tabindex="-1"></a>The century as a decimal number. The modified command %NC specifies the maximum</span>
+<span id="cb8-2"><a href="#cb8-2" aria-hidden="true" tabindex="-1"></a>number of characters to read. If N is not specified, the default is 2. Leading</span>
+<span id="cb8-3"><a href="#cb8-3" aria-hidden="true" tabindex="-1"></a>zeroes are permitted but not required. The modified command %EC interprets the</span>
+<span id="cb8-4"><a href="#cb8-4" aria-hidden="true" tabindex="-1"></a>locale&#39;s alternative representation of the century.</span></code></pre></div>
+<p>This by default accepts 2 characters, so
+<code class="sourceCode default">-09</code> would not be a valid
+century. This may cause incompatibility between binaries when used by
+different compiler versions. Since the benefit probably is small I
+propose no changes. Alternatively the wording at both places could be
+modified.</p>
 <table>
 <thead>
 <tr class="header">
@@ -712,11 +782,14 @@ code.sourceCode > span { display: inline; }
 </tbody>
 </table>
 <p><code class="sourceCode default">%Y</code></p>
-<div class="sourceCode" id="cb9"><pre class="sourceCode default"><code class="sourceCode default"><span id="cb9-1"><a href="#cb9-1"></a>The year as a decimal number. If the result is less than four digits it is</span>
-<span id="cb9-2"><a href="#cb9-2"></a>left-padded with 0 to four digits. The modified command %EY produces the</span>
-<span id="cb9-3"><a href="#cb9-3"></a>locale&#39;s alternative full year representation.</span></code></pre></div>
-<p>This wording doesn’t work properly for negative years since the padding will be in front of the sign.</p>
-<p>This wording means <code class="sourceCode default">-1</code> would be padded to <code class="sourceCode default">000-1</code>. The proposal is to use zero padding.</p>
+<div class="sourceCode" id="cb9"><pre class="sourceCode default"><code class="sourceCode default"><span id="cb9-1"><a href="#cb9-1" aria-hidden="true" tabindex="-1"></a>The year as a decimal number. If the result is less than four digits it is</span>
+<span id="cb9-2"><a href="#cb9-2" aria-hidden="true" tabindex="-1"></a>left-padded with 0 to four digits. The modified command %EY produces the</span>
+<span id="cb9-3"><a href="#cb9-3" aria-hidden="true" tabindex="-1"></a>locale&#39;s alternative full year representation.</span></code></pre></div>
+<p>This wording doesn’t work properly for negative years since the
+padding will be in front of the sign.</p>
+<p>This wording means <code class="sourceCode default">-1</code> would
+be padded to <code class="sourceCode default">000-1</code>. The proposal
+is to use zero padding.</p>
 <table>
 <thead>
 <tr class="header">
@@ -782,77 +855,87 @@ code.sourceCode > span { display: inline; }
 <h2 data-number="6.2" id="proposed-resolution-2"><span class="header-section-number">6.2</span> Proposed resolution<a href="#proposed-resolution-2" class="self-link"></a></h2>
 <div class="bq">
 <div>
-<div class="sourceCode" id="cb10"><pre class="sourceCode diff"><code class="sourceCode diff"><span id="cb10-1"><a href="#cb10-1"></a><span class="st">- If the result is a single decimal digit, it is prefixed with 0.</span></span>
-<span id="cb10-2"><a href="#cb10-2"></a><span class="va">+ If the result contains a single decimal digit, the digit is prefixed with a 0.</span></span></code></pre></div>
+<div class="sourceCode" id="cb10"><pre class="sourceCode diff"><code class="sourceCode diff"><span id="cb10-1"><a href="#cb10-1" aria-hidden="true" tabindex="-1"></a><span class="st">- If the result is a single decimal digit, it is prefixed with 0.</span></span>
+<span id="cb10-2"><a href="#cb10-2" aria-hidden="true" tabindex="-1"></a><span class="va">+ If the result contains a single decimal digit, the digit is prefixed with a 0.</span></span></code></pre></div>
 </div>
 </div>
 <h1 data-number="7" id="streaming-month-day"><span class="header-section-number">7</span> Streaming month day<a href="#streaming-month-day" class="self-link"></a></h1>
 <h2 data-number="7.1" id="discussion-5"><span class="header-section-number">7.1</span> Discussion<a href="#discussion-5" class="self-link"></a></h2>
 <p><span>29.8.9.3
- <a href="https://wg21.link/time.cal.md.nonmembers">[time.cal.md.nonmembers]</a></span>/7</p>
-<div class="sourceCode" id="cb11"><pre class="sourceCode cpp"><code class="sourceCode cpp"><span id="cb11-1"><a href="#cb11-1"></a><span class="kw">template</span><span class="op">&lt;</span><span class="kw">class</span> charT, <span class="kw">class</span> traits<span class="op">&gt;</span></span>
-<span id="cb11-2"><a href="#cb11-2"></a>  basic_ostream<span class="op">&lt;</span>charT, traits<span class="op">&gt;&amp;</span></span>
-<span id="cb11-3"><a href="#cb11-3"></a>    <span class="kw">operator</span><span class="op">&lt;&lt;(</span>basic_ostream<span class="op">&lt;</span>charT, traits<span class="op">&gt;&amp;</span> os, <span class="kw">const</span> month_day<span class="op">&amp;</span> md<span class="op">)</span>;</span>
-<span id="cb11-4"><a href="#cb11-4"></a>Effects<span class="op">:</span> Equivalent to<span class="op">:</span></span>
-<span id="cb11-5"><a href="#cb11-5"></a>    <span class="cf">return</span> os <span class="op">&lt;&lt;</span> format<span class="op">(</span>os<span class="op">.</span>getloc<span class="op">()</span>, STATICALLY<span class="op">-</span>WIDEN<span class="op">&lt;</span>charT<span class="op">&gt;(</span><span class="st">&quot;{:L}/{}&quot;</span><span class="op">)</span>,</span>
-<span id="cb11-6"><a href="#cb11-6"></a>                        md<span class="op">.</span>month<span class="op">()</span>, md<span class="op">.</span>day<span class="op">())</span>;</span></code></pre></div>
-<p>If the month day is an invalid combination, like February 30<sup>th</sup> the member function <code class="sourceCode default">ok()</code> returns <code class="sourceCode default">false</code>. However the output of this function gives no indication of an error. This is inconsistent with the other stream operators.</p>
+<a href="https://wg21.link/time.cal.md.nonmembers">[time.cal.md.nonmembers]</a></span>/7</p>
+<div class="sourceCode" id="cb11"><pre class="sourceCode cpp"><code class="sourceCode cpp"><span id="cb11-1"><a href="#cb11-1" aria-hidden="true" tabindex="-1"></a><span class="kw">template</span><span class="op">&lt;</span><span class="kw">class</span> charT, <span class="kw">class</span> traits<span class="op">&gt;</span></span>
+<span id="cb11-2"><a href="#cb11-2" aria-hidden="true" tabindex="-1"></a>  basic_ostream<span class="op">&lt;</span>charT, traits<span class="op">&gt;&amp;</span></span>
+<span id="cb11-3"><a href="#cb11-3" aria-hidden="true" tabindex="-1"></a>    <span class="kw">operator</span><span class="op">&lt;&lt;(</span>basic_ostream<span class="op">&lt;</span>charT, traits<span class="op">&gt;&amp;</span> os, <span class="kw">const</span> month_day<span class="op">&amp;</span> md<span class="op">)</span>;</span>
+<span id="cb11-4"><a href="#cb11-4" aria-hidden="true" tabindex="-1"></a>Effects<span class="op">:</span> Equivalent to<span class="op">:</span></span>
+<span id="cb11-5"><a href="#cb11-5" aria-hidden="true" tabindex="-1"></a>    <span class="cf">return</span> os <span class="op">&lt;&lt;</span> format<span class="op">(</span>os<span class="op">.</span>getloc<span class="op">()</span>, STATICALLY<span class="op">-</span>WIDEN<span class="op">&lt;</span>charT<span class="op">&gt;(</span><span class="st">&quot;{:L}/{}&quot;</span><span class="op">)</span>,</span>
+<span id="cb11-6"><a href="#cb11-6" aria-hidden="true" tabindex="-1"></a>                        md<span class="op">.</span>month<span class="op">()</span>, md<span class="op">.</span>day<span class="op">())</span>;</span></code></pre></div>
+<p>If the month day is an invalid combination, like February
+30<sup>th</sup> the member function
+<code class="sourceCode default">ok()</code> returns
+<code class="sourceCode default">false</code>. However the output of
+this function gives no indication of an error. This is inconsistent with
+the other stream operators.</p>
 <h2 data-number="7.2" id="proposed-resolution-3"><span class="header-section-number">7.2</span> Proposed resolution<a href="#proposed-resolution-3" class="self-link"></a></h2>
 <div class="bq">
 <div>
-<div class="sourceCode" id="cb12"><pre class="sourceCode diff"><code class="sourceCode diff"><span id="cb12-1"><a href="#cb12-1"></a><span class="st">- return os &lt;&lt; format(os.getloc(), STATICALLY-WIDEN&lt;charT&gt;(&quot;{:L}/{}&quot;),</span></span>
-<span id="cb12-2"><a href="#cb12-2"></a><span class="st">-                     md.month(), md.day());</span></span>
-<span id="cb12-3"><a href="#cb12-3"></a><span class="va">+ return os &lt;&lt; (!md.ok() &amp;&amp; md.month().ok() &amp;&amp; md.day().ok() ?</span></span>
-<span id="cb12-4"><a href="#cb12-4"></a><span class="va">+   format(os.getloc(), STATICALLY-WIDEN&lt;charT&gt;(&quot;{:L}/{} is not a valid month day&quot;),</span></span>
-<span id="cb12-5"><a href="#cb12-5"></a><span class="va">+          md.month(), md.day()):</span></span>
-<span id="cb12-6"><a href="#cb12-6"></a><span class="va">+   format(os.getloc(), STATICALLY-WIDEN&lt;charT&gt;(&quot;{:L}/{}&quot;),</span></span>
-<span id="cb12-7"><a href="#cb12-7"></a><span class="va">+          md.month(), md.day()));</span></span></code></pre></div>
+<div class="sourceCode" id="cb12"><pre class="sourceCode diff"><code class="sourceCode diff"><span id="cb12-1"><a href="#cb12-1" aria-hidden="true" tabindex="-1"></a><span class="st">- return os &lt;&lt; format(os.getloc(), STATICALLY-WIDEN&lt;charT&gt;(&quot;{:L}/{}&quot;),</span></span>
+<span id="cb12-2"><a href="#cb12-2" aria-hidden="true" tabindex="-1"></a><span class="st">-                     md.month(), md.day());</span></span>
+<span id="cb12-3"><a href="#cb12-3" aria-hidden="true" tabindex="-1"></a><span class="va">+ return os &lt;&lt; (!md.ok() &amp;&amp; md.month().ok() &amp;&amp; md.day().ok() ?</span></span>
+<span id="cb12-4"><a href="#cb12-4" aria-hidden="true" tabindex="-1"></a><span class="va">+   format(os.getloc(), STATICALLY-WIDEN&lt;charT&gt;(&quot;{:L}/{} is not a valid month day&quot;),</span></span>
+<span id="cb12-5"><a href="#cb12-5" aria-hidden="true" tabindex="-1"></a><span class="va">+          md.month(), md.day()):</span></span>
+<span id="cb12-6"><a href="#cb12-6" aria-hidden="true" tabindex="-1"></a><span class="va">+   format(os.getloc(), STATICALLY-WIDEN&lt;charT&gt;(&quot;{:L}/{}&quot;),</span></span>
+<span id="cb12-7"><a href="#cb12-7" aria-hidden="true" tabindex="-1"></a><span class="va">+          md.month(), md.day()));</span></span></code></pre></div>
 </div>
 </div>
 <h1 data-number="8" id="streaming-year-month-weekday"><span class="header-section-number">8</span> Streaming year month weekday<a href="#streaming-year-month-weekday" class="self-link"></a></h1>
 <h2 data-number="8.1" id="discussion-6"><span class="header-section-number">8.1</span> Discussion<a href="#discussion-6" class="self-link"></a></h2>
-<p><span class="citation" data-cites="LWG3273">[<a href="#ref-LWG3273" role="doc-biblioref">LWG3273</a>]</span> extended the valid input range for <code class="sourceCode default">chrono::weekday_indexed</code> however it didn’t update the <code class="sourceCode default">ok</code> member function nor the <code class="sourceCode default">operator&lt;&lt;</code> non-member function. This seems odd, when testing wheter a weekday is valid properly specified values are rejected.</p>
+<p><span class="citation" data-cites="LWG3273">[<a href="#ref-LWG3273" role="doc-biblioref">LWG3273</a>]</span> extended the valid input range
+for <code class="sourceCode default">chrono::weekday_indexed</code>
+however it didn’t update the <code class="sourceCode default">ok</code>
+member function nor the
+<code class="sourceCode default">operator&lt;&lt;</code> non-member
+function. This seems odd, when testing wheter a weekday is valid
+properly specified values are rejected.</p>
 <p><span>29.8.16.2
- <a href="https://wg21.link/time.cal.ymwd.members">[time.cal.ymwd.members]</a></span>/10</p>
+<a href="https://wg21.link/time.cal.ymwd.members">[time.cal.ymwd.members]</a></span>/10</p>
 <div class="bq">
 <div>
-<div class="sourceCode" id="cb13"><pre class="sourceCode diff"><code class="sourceCode diff"><span id="cb13-1"><a href="#cb13-1"></a><span class="st">- Returns: If any of y_.ok(), m_.ok(), or wdi_.ok() is false, returns false.</span></span>
-<span id="cb13-2"><a href="#cb13-2"></a><span class="va">+ Returns: If any of  y_.ok(), m_.ok(), or wdi_.weekday().ok(), or</span></span>
-<span id="cb13-3"><a href="#cb13-3"></a><span class="va">+ wdi_.weekday().index &lt;= 5 is false, returns false.</span></span>
-<span id="cb13-4"><a href="#cb13-4"></a>  Otherwise, if *this represents a valid date, returns true.</span>
-<span id="cb13-5"><a href="#cb13-5"></a>  Otherwise, returns false.</span></code></pre></div>
+<div class="sourceCode" id="cb13"><pre class="sourceCode diff"><code class="sourceCode diff"><span id="cb13-1"><a href="#cb13-1" aria-hidden="true" tabindex="-1"></a><span class="st">- Returns: If any of y_.ok(), m_.ok(), or wdi_.ok() is false, returns false.</span></span>
+<span id="cb13-2"><a href="#cb13-2" aria-hidden="true" tabindex="-1"></a><span class="va">+ Returns: If any of  y_.ok(), m_.ok(), or wdi_.weekday().ok(), or</span></span>
+<span id="cb13-3"><a href="#cb13-3" aria-hidden="true" tabindex="-1"></a><span class="va">+ wdi_.weekday().index &lt;= 5 is false, returns false.</span></span>
+<span id="cb13-4"><a href="#cb13-4" aria-hidden="true" tabindex="-1"></a>  Otherwise, if *this represents a valid date, returns true.</span>
+<span id="cb13-5"><a href="#cb13-5" aria-hidden="true" tabindex="-1"></a>  Otherwise, returns false.</span></code></pre></div>
 </div>
 </div>
 <p>[time.cal.ymwd.nonmembers]/11</p>
 <div class="bw">
 <div>
-<div class="sourceCode" id="cb14"><pre class="sourceCode diff"><code class="sourceCode diff"><span id="cb14-1"><a href="#cb14-1"></a>  Effects: Equivalent to:</span>
-<span id="cb14-2"><a href="#cb14-2"></a><span class="st">- return os &lt;&lt; format(os.getloc(), STATICALLY-WIDEN&lt;charT&gt;(&quot;{}/{:L}/{:L}&quot;),</span></span>
-<span id="cb14-3"><a href="#cb14-3"></a><span class="st">-                     ymwd.year(), ymwd.month(), ymwd.weekday_indexed());</span></span>
-<span id="cb14-4"><a href="#cb14-4"></a><span class="va">+ return os &lt;&lt; (ymwd.weekday_indexed().index() == 0) ? </span></span>
-<span id="cb14-5"><a href="#cb14-5"></a><span class="va">+   format(os.getloc(), STATICALLY-WIDEN&lt;charT&gt;(&quot;{}/{:L}/{:L}[0]&quot;),</span></span>
-<span id="cb14-6"><a href="#cb14-6"></a><span class="va">+          ymwd.year(), ymwd.month(), ymwd.weekday_indexed().weekday()):</span></span>
-<span id="cb14-7"><a href="#cb14-7"></a><span class="va">+   format(os.getloc(), STATICALLY-WIDEN&lt;charT&gt;(&quot;{}/{:L}/{:L}&quot;),</span></span>
-<span id="cb14-8"><a href="#cb14-8"></a><span class="va">+                     ymwd.year(), ymwd.month(), ymwd.weekday_indexed()));</span></span></code></pre></div>
+<div class="sourceCode" id="cb14"><pre class="sourceCode diff"><code class="sourceCode diff"><span id="cb14-1"><a href="#cb14-1" aria-hidden="true" tabindex="-1"></a>  Effects: Equivalent to:</span>
+<span id="cb14-2"><a href="#cb14-2" aria-hidden="true" tabindex="-1"></a><span class="st">- return os &lt;&lt; format(os.getloc(), STATICALLY-WIDEN&lt;charT&gt;(&quot;{}/{:L}/{:L}&quot;),</span></span>
+<span id="cb14-3"><a href="#cb14-3" aria-hidden="true" tabindex="-1"></a><span class="st">-                     ymwd.year(), ymwd.month(), ymwd.weekday_indexed());</span></span>
+<span id="cb14-4"><a href="#cb14-4" aria-hidden="true" tabindex="-1"></a><span class="va">+ return os &lt;&lt; (ymwd.weekday_indexed().index() == 0) ?</span></span>
+<span id="cb14-5"><a href="#cb14-5" aria-hidden="true" tabindex="-1"></a><span class="va">+   format(os.getloc(), STATICALLY-WIDEN&lt;charT&gt;(&quot;{}/{:L}/{:L}[0]&quot;),</span></span>
+<span id="cb14-6"><a href="#cb14-6" aria-hidden="true" tabindex="-1"></a><span class="va">+          ymwd.year(), ymwd.month(), ymwd.weekday_indexed().weekday()):</span></span>
+<span id="cb14-7"><a href="#cb14-7" aria-hidden="true" tabindex="-1"></a><span class="va">+   format(os.getloc(), STATICALLY-WIDEN&lt;charT&gt;(&quot;{}/{:L}/{:L}&quot;),</span></span>
+<span id="cb14-8"><a href="#cb14-8" aria-hidden="true" tabindex="-1"></a><span class="va">+                     ymwd.year(), ymwd.month(), ymwd.weekday_indexed()));</span></span></code></pre></div>
 </div>
 </div>
 <h1 data-number="9" id="bibliography"><span class="header-section-number">9</span> References<a href="#bibliography" class="self-link"></a></h1>
-<div id="refs" class="references hanging-indent" role="doc-bibliography">
-<div id="ref-LWG3273">
-<p>[LWG3273] Howard Hinnant. Specify weekday_indexed to range of [0, 7]. <br />
-<a href="https://wg21.link/lwg3273">https://wg21.link/lwg3273</a></p>
+<div id="refs" class="references csl-bib-body hanging-indent" role="doc-bibliography">
+<div id="ref-LWG3273" class="csl-entry" role="doc-biblioentry">
+[LWG3273] Howard Hinnant. Specify weekday_indexed to range of [0, 7]. <a href="https://wg21.link/lwg3273"><div class="csl-block">https://wg21.link/lwg3273</div></a>
 </div>
-<div id="ref-P1361R2">
-<p>[P1361R2] Victor Zverovich, Daniela Engert, Howard E. Hinnant. 2019-07-19. Integration of chrono with text formatting. <br />
-<a href="https://wg21.link/p1361r2">https://wg21.link/p1361r2</a></p>
+<div id="ref-P1361R2" class="csl-entry" role="doc-biblioentry">
+[P1361R2] Victor Zverovich, Daniela Engert, Howard E. Hinnant.
+2019-07-19. Integration of chrono with text formatting. <a href="https://wg21.link/p1361r2"><div class="csl-block">https://wg21.link/p1361r2</div></a>
 </div>
-<div id="ref-P1466R3">
-<p>[P1466R3] Howard E. Hinnant. 2019-07-17. Miscellaneous minor fixes for chrono. <br />
-<a href="https://wg21.link/p1466r3">https://wg21.link/p1466r3</a></p>
+<div id="ref-P1466R3" class="csl-entry" role="doc-biblioentry">
+[P1466R3] Howard E. Hinnant. 2019-07-17. Miscellaneous minor fixes for
+chrono. <a href="https://wg21.link/p1466r3"><div class="csl-block">https://wg21.link/p1466r3</div></a>
 </div>
-<div id="ref-P2372R3">
-<p>[P2372R3] Victor Zverovich, Corentin Jabot. 2021-09-12. Fixing locale handling in chrono formatters. <br />
-<a href="https://wg21.link/p2372r3">https://wg21.link/p2372r3</a></p>
+<div id="ref-P2372R3" class="csl-entry" role="doc-biblioentry">
+[P2372R3] Victor Zverovich, Corentin Jabot. 2021-09-12. Fixing locale
+handling in chrono formatters. <a href="https://wg21.link/p2372r3"><div class="csl-block">https://wg21.link/p2372r3</div></a>
 </div>
 </div>
 </div>
